@@ -124,7 +124,6 @@ int main() {
   // - count() can be used as an alternative to find() when checking for
   // existence in contests.
 
-
   // 7. Demonstration of sort() function in STL
 
   // The sort() function sorts an array in ascending order by default.
@@ -154,5 +153,25 @@ int main() {
   // - It works in O(N log N) time complexity, making it very efficient for
   // large datasets.
   // - The sorting is done in-place, modifying the original array.
+
+  // 8. Demonstration of the binary_search() function in STL (Standard Template
+  // Library) The binary_search() function is more efficient for searching in a
+  // sorted array compared to the find() function, which uses linear search.
+  // Binary search works by repeatedly dividing the search interval in half,
+  // making it much faster for large datasets.
+
+  // Binary search works efficiently on sorted arrays.
+  // The array must be sorted in increasing order for correct results.
+  int arr5[4] = {14, 21, 28, 35};  // Sorted array
+
+  // The binary_search(start, end, key) function checks if 'key' is present in
+  // the given range. It returns true (1) if found, otherwise false (0). Mainly
+  // it returns boolean value
+
+  cout << binary_search(arr5, arr5 + 4, 21)
+       << endl;  // Searches for 21, should return 1 (true)
+  cout << binary_search(arr5, arr5 + 4, 7)
+       << endl;  // Searches for 7, should return 0 (false)
+
   return 0;
 }
